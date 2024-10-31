@@ -78,13 +78,29 @@ You can run the tests using `pytest`:
 poetry run pytest
 ```
 
+Also, you can try running the tests with coverage:
+
+```bash
+poetry run pytest --cov
+```
+
+Note: In case the celery worker is not running, you can run the tests without running the background tasks by adding the `--no-celery` flag.
+
+You can also run the tests individually for example:
+
+```bash
+poetry run pytest -k test_health_check
+poetry run pytest -k test_get_candidate
+```
+
+
 ### 7. Docker Setup:
 
 You can run the entire project in Docker. Build and run the Docker container using:
 
 ```bash
-docker build -t fastapi-candidate-management .
-docker run -p 8000:8000 fastapi-candidate-management
+docker build -t candidate-cms .
+docker run -p 8000:8000 candidate-cms
 ```
 
 ## API Endpoints
@@ -137,10 +153,10 @@ pre-commit install
 
 ```toml
 [tool.poetry]
-name = "fastapi-candidate-management"
+name = "candidate-cms"
 version = "0.1.0"
 description = "A candidate management system with FastAPI, Async MongoDB, and Celery"
-authors = ["Your Name <you@example.com>"]
+authors = ["Razi <mrrazi.baig@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
