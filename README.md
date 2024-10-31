@@ -103,6 +103,10 @@ docker build -t candidate-cms .
 docker run -p 8000:8000 candidate-cms
 ```
 
+## API Docs
+
+You can view the API docs at `http://localhost:8000/docs`.
+
 ## API Endpoints
 
 - `GET /health`: Health check for the API.
