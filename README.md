@@ -23,8 +23,8 @@ This is a candidate management system built using FastAPI, MongoDB (with `motor`
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-repo/fastapi-candidate-management.git
-cd fastapi-candidate-management
+git clone https://github.com/razibaig/candidate-cms.git
+cd candidate-cms
 ```
 
 ### 2. Install dependencies:
